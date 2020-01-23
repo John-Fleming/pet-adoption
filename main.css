@@ -3,3 +3,25 @@ body {
     margin: 0;
     padding: 0;
 }
+
+#pet-card-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.pet-card {
+    border: 2px solid lightgrey;
+    margin: 10px;
+}
+
+.pet-type-cat {
+    background-color: lightblue;
+}
+
+.pet-type-dog {
+    background-color: rgb(126, 182, 126);
+}
+
+.pet-type-dino {
+    background-color: rgb(219, 82, 82);
+}
