@@ -37,22 +37,77 @@ body {
 #pet-card-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
+    margin: 0 10%;
 }
 
 .pet-card {
     border: 2px solid lightgrey;
+    border-radius: 1%;
+    width: 30%;
     margin: 10px;
+    padding: 0;
+    text-align: center;
+    position: relative;
 }
+
+.pet-card h2 {
+    background-color: lightgrey;
+    color: rgb(92, 92, 92);
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    margin-top: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pet-card p {
+    font-size: 20px;
+}
+
+.pet-card img {
+    width: 70%;
+    border: 1px solid lightgrey;
+    border-radius: 1%;
+    padding: 3%;
+    margin-top: 18%;
+}
+
+.pet-card-color {
+    margin: 5px auto;
+}
+
+.pet-special-skill {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+}
+
 
 .pet-type-cat {
     background-color: lightblue;
+    color: rgb(5, 125, 165);
 }
 
 .pet-type-dog {
     background-color: rgb(126, 182, 126);
+    color: rgb(9, 114, 9);
 }
 
 .pet-type-dino {
     background-color: rgb(219, 82, 82);
+    color: rgb(126, 8, 8);
+}
+
+.pet-type-cat, .pet-type-dog, .pet-type-dino {
+    margin-bottom: auto;
+    border-radius: 1%;
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
