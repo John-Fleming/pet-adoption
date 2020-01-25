@@ -56,31 +56,13 @@ const printToDom = (divId, textToPrint) => {
   const petCardCreator = () => {
       let domString = '';
       for (pet in pets) {
-          if (pets[pet].type === 'cat') {
-            domString += `<div class="pet-card">`;
-            domString +=   `<h2 class="pet-name">${pets[pet].name}</h2>`;
-            domString +=   `<img src=${pets[pet].imageUrl} alt="picture of a ${pets[pet].type}">`;
-            domString +=   `<p class="pet-color">${pets[pet].color}</p>`;
-            domString +=   `<p class="pet-special-skill">${pets[pet].specialSkill}</p>`;
-            domString +=   `<p class="pet-type-cat">${pets[pet].type}</p>`;
-            domString += `</div>`;
-          } else if (pets[pet].type === 'dog') {
-                domString += `<div class="pet-card">`;
-                domString +=   `<h2 class="pet-name">${pets[pet].name}</h2>`;
-                domString +=   `<img src=${pets[pet].imageUrl} alt="picture of a ${pets[pet].type}">`;
-                domString +=   `<p class="pet-color">${pets[pet].color}</p>`;
-                domString +=   `<p class="pet-special-skill">${pets[pet].specialSkill}</p>`;
-                domString +=   `<p class="pet-type-dog">${pets[pet].type}</p>`;
-                domString += `</div>`;
-            } else if (pets[pet].type === 'dino') {
-                    domString += `<div class="pet-card">`;
-                    domString +=   `<h2 class="pet-name">${pets[pet].name}</h2>`;
-                    domString +=   `<img src=${pets[pet].imageUrl} alt="picture of a ${pets[pet].type}">`;
-                    domString +=   `<p class="pet-color">${pets[pet].color}</p>`;
-                    domString +=   `<p class="pet-special-skill">${pets[pet].specialSkill}</p>`;
-                    domString +=   `<p class="pet-type-dino">${pets[pet].type}</p>`;
-                    domString += `</div>`;
-                }
+        domString += `<div class="pet-card">`;
+        domString +=   `<h2 class="pet-name">${pets[pet].name}</h2>`;
+        domString +=   `<img src=${pets[pet].imageUrl} alt="picture of a ${pets[pet].type}">`;
+        domString +=   `<p class="pet-color">${pets[pet].color}</p>`;
+        domString +=   `<p class="pet-special-skill">${pets[pet].specialSkill}</p>`;
+        domString +=   `<p class="pet-type-${pets[pet].type}">${pets[pet].type}</p>`;
+        domString += `</div>`;
       printToDom('pet-card-container', domString);
     }
   };
