@@ -53,7 +53,7 @@ const printToDom = (divId, textToPrint) => {
 
   // array loop function
 
-  const petCardCreator = () => {
+  const petCardCreator = (pets) => {
       let domString = '';
       for (pet in pets) {
         domString += `<div class="pet-card">`;
@@ -67,4 +67,31 @@ const printToDom = (divId, textToPrint) => {
     }
   };
 
-  petCardCreator();
+const filterAnimals = (e) => {
+  const buttonId = e.target.id;
+  if (buttonId === 'all') {
+    petCardCreator(pets);
+  } else {
+    const myAnimals = [];
+    for (pet in pets) {
+      if (pets[pet].type === buttonId) {
+        myAnimals.push(pets[pet]);
+      }
+    }
+    petCardCreator(myAnimals);
+  }
+};
+
+const events = () => {
+  document.getElementById('cat').addEventListener('click', filterAnimals);
+  document.getElementById('dog').addEventListener('click', filterAnimals);
+  document.getElementById('dino').addEventListener('click', filterAnimals);
+  document.getElementById('all').addEventListener('click', filterAnimals);
+};
+
+const init = () => {
+  petCardCreator(pets);
+  events();
+};
+  
+init();

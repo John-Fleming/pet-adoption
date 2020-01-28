@@ -34,16 +34,20 @@ body {
     box-shadow: 5px 5px 20px rgba(167, 164, 164, 0.973); 
 }
 
-.cat-button {
+#cat {
     background-color: lightblue;
 }
 
-.dog-button {
+#dog {
     background-color: rgb(126, 182, 126);
 }
 
-.dino-button {
+#dino {
     background-color: rgb(219, 82, 82);
+}
+
+#all {
+    background-color: rgb(82, 40, 131);
 }
 
 /* card styles */
